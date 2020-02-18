@@ -1,37 +1,68 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D wall</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress-bar-con">
+    <div class="progress-bar"></div>
+</div>
+<div class="select-character">
+    <button class="select-character-btn select-character-btn-ilbuni" data-char="ilbuni"></button>
+    <button class="select-character-btn select-character-btn-ragirl" data-char="ragirl"></button>
+</div>
 
-You can use the [editor on GitHub](https://github.com/d0nna/reanny-work-crazy/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<div class="world">
+    <div class="stage">
+        <div class="house">
+            <section class="wall wall-left"></section>
+            <section class="wall wall-right"></section>
+            <section class="wall wall-front wall-front-a">
+                <div class="wall-content">
+                    <h2 class="wall-title">안녕하세요</h2>
+                </div>
+            </section>
+            <section class="wall wall-front wall-front-b">
+                <div class="wall-content">
+                    <h2 class="wall-title">Hello</h2>
+                </div>
+            </section>
+            <section class="wall wall-front wall-front-c">
+                <div class="wall-content">
+                    <h2 class="wall-title">Hola</h2>
+                </div>
+            </section>
+            <section class="wall wall-front wall-front-d">
+                <div class="wall-content">
+                    <h2 class="wall-title">こんにちは</h2>
+                </div>
+            </section>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+        </div>
+        <!--// house -->
 
-### Markdown
+        <!-- 캐릭터 놓이는 곳 -->
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    </div>
+    <!--// stage -->
+</div>
+<!--// world -->
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/d0nna/reanny-work-crazy/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<script src="js/Character.js"></script>
+<script src="js/wall3d.js"></script>
+<script>
+(function () {
+    const useragent = window.navigator.userAgent.toLowerCase();
+    if (useragent.indexOf('chrome') < 0 && useragent.indexOf('safari') < 0) {
+        document.body.style.cssText = 'height: auto';
+        document.body.innerHTML = '<p style="padding: 20px; line-height: 1.6">본 예제는 Full CSS 3D가 사용된 페이지로, webkit 기반 브라우저(크롬, 사파리 등)에서 확인하며 학습하시는게 좋습니다.<br>CSS 3D 부분 외에는 브라우저 상관없이 인터랙티브 웹 페이지 개발을 위해 필수적이고 유용한 내용들을 다루고 있으니 꼭 처음부터 끝까지 공부해 보세요! :)</p>';
+    }
+})();
+</script>
+</body>
+</html>
